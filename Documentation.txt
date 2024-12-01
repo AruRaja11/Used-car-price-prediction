@@ -1,0 +1,130 @@
+## PROJECT DOCUMENTATION ##
+1.PROJECT OVERWIEW
+    ->Project Name: Car Dheko - Used Car Price Prediction
+    ->Project Description: Imagine you are working as a data scientist in Car Dheko, your aim is to enhance the customer experience and streamline the pricing process by leveraging machine learning. You need to create an accurate and user-friendly streamlit tool that predicts the prices of used cars based on various features. This tool should be deployed as an interactive web application for both customers and sales representatives to use seamlessly.
+    ->Technologies Used: Python - Pandas, model development in sklearn, visualization in matplotlib, streamlit interface
+
+2. SETUP INSTRUCTIONS 
+    -> Environment Setup: It is recommended to use jupyter ide
+    -> Installation steps: 
+        ⨀ File 1 (CarDekho_file1.ipynb):
+            1. verify whether pandas is installed in your ide
+            2. Make sure that you have the dataset in the certain path
+        ⨀ File 2 (Cleaning_.ipynb):
+            1. Install Sklearn library using pip
+                ________________________________
+                # installing sklearn
+                pip install scikit-learn
+                ________________________________
+            
+            2. Verify the extracted dataset is in the same folder
+        ⨀ File 3 (Vizualization.ipynb):
+            1. Verify whether you have installed "sklearn"
+            2. Verify you have matplotlib and seaborn installed
+            3. Verify you have the cleaned dataset in the same folder or path
+        ⨀ File 4 (rraining_.py):
+            1. Install "scikit-learn" in the environment where the py file is running 
+                *for better convenience run on the streamlit environment before executing streamlit app
+                *Open terminal of the streamlit environment and execute the below code
+                    ________________________________
+                    # installing sklearn
+                    pip install scikit-learn
+                    ________________________________
+            2.Verify you have pandas in the same path
+        ⨀ File 5 (car_dekho_file.py):
+            1. Install "streamlit" in your computer
+                * Open terminal in your anaconda and type
+                    ________________________________
+                    # installing streamlit
+                    pip install streamlit
+                    ________________________________   
+                * to validate your installation type ""streamlit hello""
+            2. Verify you have installed "sklearn" library
+            3. Install "annotated_text" in the same path - *i used annotated-text for better experience*
+                *open terminal in your anaconda and type
+                    ________________________________
+                    # installing annotated_text
+                    pip install st-annotated-text
+                    ________________________________
+            4. Import the "training_" file to use the function in the .py file
+
+3.PROJECT STRUCTURE
+|-- CarDekho_file1.ipynb   # extracting data from raw data
+|-- Cleaning_.ipynb        # cleaning the data -> changing the dtype, normaizing, validating
+|-- Vizualization.ipynb    # using matplotlib and seaborn to vizualize the, data finding the relation
+|-- training_.py           # creating a model to feed the data and get the resultant output
+|-- car_dekho_app.py       # a application interface using streamlit
+|-- README.txt             # docmentation 
+|-- "all datasets"
+
+4. USAGE INSTRUCTIONS 
+    1. Running ipynb:
+        --> use jupyter or google colab to execute 
+                • CarDekho_file1.ipynb
+                • Cleaning_.ipynb
+                • Vizualization.ipynb
+    2. Executing car_dekho_app.py
+        --> use terminal to execute this file too * use the command below
+                    ________________________________
+                    # executing car_dekho_app.py
+                    streamlit run car_dekho_app.py
+                    ________________________________
+
+    ⨀ INPUT: Provide your own input on the filters tab in "car_dekho_app.py" streamlit application
+    ⨀ OUTPUT: Based on your specific features the model will provide output as:-
+        • Annotation of your selected features
+        • Predicted price based on the features
+        • The accuracy of the model 
+
+5. FEATURES
+    -> CORE FEATURES
+        • The raw feature is extracted and the requried features are extracted
+        • The extracted features are cleaned so that the model can understand the data. The null values are cleaned, the datas are extracted using regular expression, normalization are also done.
+        • The datas extracted are visualized so that features and correlation is understood. using this the relations are found and decision are taken based on it.
+        • Model is trained using the cleaned data to predict using the result based on the features provided
+
+6. MODEL/ALGORITHM DETAILS
+    -> Overview of model
+        • Here RandomForestClassifier machine learning algorithm is used which is a best Regression algorithm
+    -> Hyperparameter Tuning
+        • Here "GridSearchCV" is used for tuning the model with 4 parameters that includes => n_estimators, max_features, min_sample_splits, max_depths
+    -> Performance Martices
+        • R2_score
+
+7. EXECUTION STEPS 
+    To see the results of the project you need to follow the below steps
+    
+    ⨀ Execute "CarDekho_file1.ipynb": 
+        ‣ Use jupyter or google colab to execute this file
+        ‣ In this file the required columns and features are extracted using certain functions
+    ⨀ Execute "Cleaning_.ipynb":
+        ‣ Use jupyter or google colab to execute this file too 
+        ‣ This file contain the program to clean the raw data - removing the null values, changing the dtypes, encoding the categorical value, noramalizing.
+        ‣ This file should be executed after "CarDekho_file1".
+    
+    ⨀ Execute "Vizualization.ipynb":
+        ‣ This file contains programs to visualize the relation between the features and columns. The features are correlated and vizualized to understand.
+    
+    ⨀ About "training_.py": 
+        ‣ you don't need to execute this file because this file is imported in the application file, so this is executed while you execute "car_dekho_app.py"
+        ‣ but you can execute if you want to understand the models accuracy or scaled accuracy or accuracy after using hyperparameter tuning
+    
+    ⨀ Execute "car_dekho_app.py": 
+        ‣ run this python file as I suggested above
+        ‣ This file contains the program for UI application. The features are changed and results are predicted
+        ‣ Click on apply filters to see the price of your selected features.
+        ‣ While running this file, it may take some time to execute because the model is trained and it also take time to run GridSearchCV
+
+8. CONCLUSION
+        ‣ There by a model is build using from extracting features from the raw dataset to building a application which will provide the result prediction the user. 
+        ‣ A convinent app is build that improves user experience and convineance in selecting features and analysing the price rate
+        ‣ GridSearchCV hyperparameter tuning algorithms are used to improve the performance of the program
+
+
+                                                        ***** THANK YOU *****
+
+
+
+
+
+                
