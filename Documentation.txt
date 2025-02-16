@@ -22,16 +22,8 @@
             1. Verify whether you have installed "sklearn"
             2. Verify you have matplotlib and seaborn installed
             3. Verify you have the cleaned dataset in the same folder or path
-        ⨀ File 4 (rraining_.py):
-            1. Install "scikit-learn" in the environment where the py file is running 
-                *for better convenience run on the streamlit environment before executing streamlit app
-                *Open terminal of the streamlit environment and execute the below code
-                    ________________________________
-                    # installing sklearn
-                    pip install scikit-learn
-                    ________________________________
-            2.Verify you have pandas in the same path
-        ⨀ File 5 (car_dekho_file.py):
+
+        ⨀ File 4 (car_dekho_file.py):
             1. Install "streamlit" in your computer
                 * Open terminal in your anaconda and type
                     ________________________________
@@ -46,13 +38,12 @@
                     # installing annotated_text
                     pip install st-annotated-text
                     ________________________________
-            4. Import the "training_" file to use the function in the .py file
+            
 
 3.PROJECT STRUCTURE
 |-- CarDekho_file1.ipynb   # extracting data from raw data
 |-- Cleaning_.ipynb        # cleaning the data -> changing the dtype, normaizing, validating
 |-- Vizualization.ipynb    # using matplotlib and seaborn to vizualize the, data finding the relation
-|-- training_.py           # creating a model to feed the data and get the resultant output
 |-- car_dekho_app.py       # a application interface using streamlit
 |-- README.txt             # docmentation 
 |-- "all datasets"
@@ -104,11 +95,7 @@
     
     ⨀ Execute "Vizualization.ipynb":
         ‣ This file contains programs to visualize the relation between the features and columns. The features are correlated and vizualized to understand.
-    
-    ⨀ About "training_.py": 
-        ‣ you don't need to execute this file because this file is imported in the application file, so this is executed while you execute "car_dekho_app.py"
-        ‣ but you can execute if you want to understand the models accuracy or scaled accuracy or accuracy after using hyperparameter tuning
-    
+   
     ⨀ Execute "car_dekho_app.py": 
         ‣ run this python file as I suggested above
         ‣ This file contains the program for UI application. The features are changed and results are predicted
