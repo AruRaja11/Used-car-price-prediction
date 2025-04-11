@@ -8,6 +8,6 @@ Imagine you are working as a data scientist in Car Dheko, your aim is to enhance
 3. Using powerful machine learning algorithms
 4. Review and Selections are available
 # Screenshots
-
-
+![alt text](https://github.com/AruRaja11/Used-car-price-prediction/blob/e2a513cc727e5216d528e508b741a26629b26808/Screenshots/Page%201.png)
+![alt text](
                 
